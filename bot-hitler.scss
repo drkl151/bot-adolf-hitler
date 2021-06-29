@@ -1,0 +1,150 @@
+$color-hitler: rgb(196, 51, 51);
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient( $color-hitler, rgba(248, 221, 221, 0.747), rgba(0, 0, 0, 0.575));
+    border-radius: 20%;
+}
+
+.wrapper {
+    .stage-background {
+        width: 100vw;
+        height: 100vh;
+        background-image: url(./img/backgrounds/background-cabinet.jpeg);
+        background-size: cover;
+        background-position: bottom;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+
+        .character {
+            width: 23%;
+            height: 80%;
+            margin-right: 130px;
+            background-image: url(./img/adolf-hitler.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: 1;
+        }
+
+        .modal_block {
+            width: 65vw;
+            height: 100vh;
+            position: fixed;
+            left: 0px;
+            display: flex;
+            align-items: center;
+
+            .message_window_block {
+                background-color: rgba(0, 0, 0, 0.548);
+                border: 1px solid rgb(0, 0, 0);
+                border-radius: 5px;
+                width: 60%;
+                height: 93%;
+                margin: 0px 0 0 200px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .correspondence_block {
+                    width: 100%;
+                    height: 81%;
+                    padding: 0 0 15px 0;
+                    display: flex;
+                    flex-direction: column;
+                    overflow-y: scroll;
+
+                    &:last-of-type {
+                        margin-bottom: 20px;
+                    }
+
+                    .message-user,
+                    .message-bot {
+                        width: fit-content;
+                        height: fit-content;
+                        margin: 30px 20px 0 20px;
+                        padding: 12px;
+                        font-size: 18px;
+                        border: 1px solid rgb(0, 0, 0);
+                    }
+
+                    .message-user {
+                        background-color: #fff;
+                        border-radius: 30px 30px 0 30px;
+                        align-self: flex-end;
+                    }
+
+                    .message-bot {
+                        background-color: $color-hitler;
+                        border-radius: 0 30px 30px 30px;
+                    }
+                }
+
+                .wrapper-input_block {
+                    width: 92%;
+                    height: 17%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+
+                    .default_messages {
+                        width: 100%;
+                        height: 78%;
+                        display: flex;
+                        justify-content: space-around;
+
+                        p {
+                            border: 2px solid rgb(0, 0, 0);
+                            background-color: #fff;
+                            padding: 10px 17px;
+                            border-radius: 50px;
+                            font-size: 18px;
+                            cursor: pointer;
+                        }
+                    }
+
+                    .input_block {
+                        background-color: rgb(255, 255, 255);
+                        border: 1px solid rgb(0, 0, 0);
+                        width: 100%;
+                        height: 45%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        border-radius: 5px;
+
+                        input {
+                            width: 92%;
+                            height: 86%;
+                            outline: none;
+                            text-align: center;
+                            border: none;
+                        }
+
+                        .send-message {
+                            color: $color-hitler;
+                            width: 8%;
+                            height: 86%;
+                            border: none;
+                            background-color: transparent;
+                            font-size: 23px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
