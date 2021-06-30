@@ -6,7 +6,8 @@ body {
   padding: 0; }
 
 ::-webkit-scrollbar {
-  width: 4px; }
+  width: 4px;
+  height: 3px; }
 
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(#c43333, rgba(248, 221, 221, 0.747), rgba(0, 0, 0, 0.575));
@@ -46,28 +47,26 @@ body {
       display: flex;
       flex-direction: column;
       align-items: center; }
-      .wrapper .stage-background .modal_block .message_window_block .correspondence_block {
+      .wrapper .stage-background .modal_block .message_window_block .chat_block {
         width: 100%;
         height: 81%;
         padding: 0 0 15px 0;
         display: flex;
         flex-direction: column;
         overflow-y: scroll; }
-        .wrapper .stage-background .modal_block .message_window_block .correspondence_block:last-of-type {
-          margin-bottom: 20px; }
-        .wrapper .stage-background .modal_block .message_window_block .correspondence_block .message-user,
-        .wrapper .stage-background .modal_block .message_window_block .correspondence_block .message-bot {
+        .wrapper .stage-background .modal_block .message_window_block .chat_block .message-user,
+        .wrapper .stage-background .modal_block .message_window_block .chat_block .message-bot {
           width: fit-content;
           height: fit-content;
           margin: 30px 20px 0 20px;
           padding: 12px;
           font-size: 18px;
           border: 1px solid black; }
-        .wrapper .stage-background .modal_block .message_window_block .correspondence_block .message-user {
+        .wrapper .stage-background .modal_block .message_window_block .chat_block .message-user {
           background-color: #fff;
           border-radius: 30px 30px 0 30px;
           align-self: flex-end; }
-        .wrapper .stage-background .modal_block .message_window_block .correspondence_block .message-bot {
+        .wrapper .stage-background .modal_block .message_window_block .chat_block .message-bot {
           background-color: #c43333;
           border-radius: 0 30px 30px 30px; }
       .wrapper .stage-background .modal_block .message_window_block .wrapper-input_block {
@@ -80,10 +79,12 @@ body {
           width: 100%;
           height: 78%;
           display: flex;
-          justify-content: space-around; }
-          .wrapper .stage-background .modal_block .message_window_block .wrapper-input_block .default_messages p {
+          justify-content: space-around;
+          overflow-x: scroll; }
+          .wrapper .stage-background .modal_block .message_window_block .wrapper-input_block .default_messages .text-default_messages {
             border: 2px solid black;
             background-color: #fff;
+            margin: 15px 13px;
             padding: 10px 17px;
             border-radius: 50px;
             font-size: 18px;

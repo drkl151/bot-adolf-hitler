@@ -1,1 +1,1 @@
-# bot-adolf-hitler
+[Bot Hitler](https://drkl151.github.io/bot-adolf-hitler/bot-hitler.html)
