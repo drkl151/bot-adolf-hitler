@@ -1,15 +1,15 @@
 const commands = [
     {
-        userMessage: 'привет',
-        botMessage: ''
+        userMessage: ['привет', 'добрый день', 'добрый вечер', 'доброе утро'],
+        botMessage: ['еу', 'Хайль!']
     },
     {
-        userMessage: '',
-        botMessage: ''
+        userMessage: 'хай',
+        botMessage: 'хей'
     },
     {
-        userMessage: '',
-        botMessage: ''
+        userMessage: 'a',
+        botMessage: ['psa','csdd']
     },
     {
         userMessage: '',
