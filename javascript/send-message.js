@@ -29,6 +29,7 @@ function generateMessage(userMessage) {
     botReplica.classList.add('message-bot');
     userReplica.textContent = userMessage;
 
+    //object array filter (bot-commands.js) 
     const filterMessage = commands.filter((message) => {
         return typeof message.userMessage === 'string' ? (
             message.userMessage === lowerCaseMessage
@@ -46,7 +47,7 @@ function generateMessage(userMessage) {
         }
 
     } else {
-        botReplica.textContent = '...';
+        botReplica.textContent = unknownCommand[Math.floor(Math.random() * unknownCommand.length)];
     }
 
     chatBlock.scrollTop = chatBlock.scrollHeight;

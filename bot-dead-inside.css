@@ -10,13 +10,13 @@ body {
   height: 3px; }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(#c43333, rgba(248, 221, 221, 0.747), rgba(0, 0, 0, 0.575));
+  background: linear-gradient(#e33d2b, rgba(248, 221, 221, 0.747), rgba(0, 0, 0, 0.575));
   border-radius: 20%; }
 
 .wrapper .stage-background {
   width: 100vw;
   height: 100vh;
-  background-image: url(./img/backgrounds/background-cabinet.jpeg);
+  background-image: url(./img/backgrounds/background-foreground.jpg);
   background-size: cover;
   background-position: bottom;
   display: flex;
@@ -26,7 +26,7 @@ body {
     width: 23%;
     height: 80%;
     margin-right: 130px;
-    background-image: url(./img/adolf-hitler.png);
+    background-image: url(./img/the-character.png);
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 1; }
@@ -67,7 +67,7 @@ body {
           border-radius: 30px 30px 0 30px;
           align-self: flex-end; }
         .wrapper .stage-background .modal_block .message_window_block .chat_block .message-bot {
-          background-color: #c43333;
+          background-color: #e33d2b;
           border-radius: 0 30px 30px 30px; }
       .wrapper .stage-background .modal_block .message_window_block .wrapper-input_block {
         width: 92%;
@@ -81,10 +81,11 @@ body {
           display: flex;
           overflow-x: scroll; }
           .wrapper .stage-background .modal_block .message_window_block .wrapper-input_block .default_messages .text-default_messages {
+            width: fit-content;
             border: 2px solid black;
             background-color: #fff;
             margin: 15px 13px;
-            padding: 10px 17px;
+            padding: 10px 19px;
             border-radius: 50px;
             font-size: 18px;
             cursor: pointer; }
@@ -104,7 +105,7 @@ body {
             text-align: center;
             border: none; }
           .wrapper .stage-background .modal_block .message_window_block .wrapper-input_block .input_block .send-message {
-            color: #c43333;
+            color: #e33d2b;
             width: 8%;
             height: 86%;
             border: none;
@@ -112,4 +113,4 @@ body {
             font-size: 23px;
             cursor: pointer; }
 
-/*# sourceMappingURL=bot-hitler.css.map */
+/*# sourceMappingURL=bot-dead-inside.css.map */

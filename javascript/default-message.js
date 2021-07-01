@@ -1,6 +1,6 @@
 const blockDefaultMessages = document.querySelector('.default_messages');
 
-const defoultMessage = ['ііі', 'Привет', 'ййй', 'ууу', 'ккк', 'еее',];
+const defoultMessage = ['Привет', 'Почему ты дединсайд?', 'ййй', 'ууу', 'ккк', 'еее',];
 
 
 defoultMessage.forEach((text, i) => {

@@ -1,1 +1,1 @@
-[Bot Hitler](https://drkl151.github.io/bot-adolf-hitler/bot-hitler.html)
+[Bot Dead inside](https://drkl151.github.io/bot-adolf-hitler/bot-hitler.html)
