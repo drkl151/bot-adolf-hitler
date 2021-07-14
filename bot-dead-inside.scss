@@ -1,4 +1,4 @@
-$color-character: rgb(227,61,43);
+$color-character: rgb(227, 61, 43);
 
 * {
     box-sizing: border-box;
@@ -29,6 +29,7 @@ body {
         display: flex;
         justify-content: flex-end;
         align-items: flex-end;
+        transition: background 2s;
 
         .character {
             width: 23%;
@@ -40,7 +41,7 @@ body {
             z-index: 1;
         }
 
-        .modal_block {
+        .wrapper-chat-block {
             width: 65vw;
             height: 100vh;
             position: fixed;
@@ -48,7 +49,38 @@ body {
             display: flex;
             align-items: center;
 
-            .message_window_block {
+            .button-back {
+                width: 75px;
+                height: 60px;
+                position: fixed;
+                left: 90px;
+                bottom: 40px;
+                padding: 5px;
+                border: 2px solid rgb(255, 255, 255);
+                background-color: transparent;
+                border-radius: 7px;
+                cursor: pointer;
+                display: none;
+                transition:  .9s;
+            
+                &::before {
+                    content: "←";
+                    color: rgb(255, 255, 255);
+                    font-size: 40px;
+                    font-weight: 900;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                }
+
+                &:active {
+                    box-shadow: inset 1px 1px 5px black;
+                    border: 2px solid rgb(255, 0, 0);
+                }
+            }
+
+            .message-window-block {
                 background-color: rgba(0, 0, 0, 0.548);
                 border: 1px solid rgb(0, 0, 0);
                 border-radius: 5px;
@@ -59,7 +91,7 @@ body {
                 flex-direction: column;
                 align-items: center;
 
-                .chat_block {
+                .chat-block {
                     width: 100%;
                     height: 81%;
                     padding: 0 0 15px 0;
@@ -89,20 +121,20 @@ body {
                     }
                 }
 
-                .wrapper-input_block {
+                .wrapper-input-block {
                     width: 92%;
                     height: 17%;
                     display: flex;
                     flex-direction: column;
                     align-items: flex-end;
 
-                    .default_messages {
+                    .default-messages {
                         width: 100%;
                         height: 78%;
-                        display: flex;  
+                        display: flex;
                         overflow-x: scroll;
 
-                        .text-default_messages {
+                        .text-default-messages {
                             width: fit-content;
                             border: 2px solid rgb(0, 0, 0);
                             background-color: #fff;
@@ -111,10 +143,11 @@ body {
                             border-radius: 50px;
                             font-size: 18px;
                             cursor: pointer;
+                            white-space: pre;
                         }
                     }
 
-                    .input_block {
+                    .input-block {
                         background-color: rgb(255, 255, 255);
                         border: 1px solid rgb(0, 0, 0);
                         width: 100%;
@@ -124,7 +157,7 @@ body {
                         align-items: center;
                         border-radius: 5px;
 
-                        input {
+                        .input-message {
                             width: 92%;
                             height: 86%;
                             outline: none;
@@ -132,7 +165,7 @@ body {
                             border: none;
                         }
 
-                        .send-message {
+                        .input-block__send-message {
                             color: $color-character;
                             width: 8%;
                             height: 86%;

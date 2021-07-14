@@ -1,11 +1,11 @@
-const blockDefaultMessages = document.querySelector('.default_messages');
+const blockDefaultMessages = document.querySelector('.default-messages');
 
-const defoultMessage = ['Привет', 'Почему ты дединсайд?', 'ййй', 'ууу', 'ккк', 'еее',];
+const defoultMessage = ['Привет', 'Как дела?', 'Кто ты?', 'Как стать dead inside?',  'Где ты живешь?', 'Ты веришь в любовь?', 'Покажи комнату',];
 
 
 defoultMessage.forEach((text, i) => {
     const textBlock = document.createElement('p');
-    textBlock.classList.add('text-default_messages');
+    textBlock.classList.add('text-default-messages');
     textBlock.appendChild(document.createTextNode(text));
 
     blockDefaultMessages.appendChild(textBlock);
@@ -19,5 +19,6 @@ textDefaultMessage.forEach(el => {
 
     el.addEventListener('click', () => {
         generateMessage(el.textContent);
+        el.remove();
     })
 });

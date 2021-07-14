@@ -7,7 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Бот Дед Инсайд</title>
     <link rel="stylesheet" href="./bot-dead-inside.css">
-    <link rel="shortcut icon" type="image/png" href="./img/icon.webp"/>
+    <link rel="shortcut icon" type="image/png" href="./img/icon.webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kurale&display=swap" rel="stylesheet">
+    <script defer src="./javascript/bot-actions.js"></script>
     <script defer src="./javascript/default-message.js"></script>
     <script defer src="./javascript/bot-commands.js"></script>
     <script defer src="./javascript/send-message.js"></script>
@@ -18,15 +22,18 @@
         <div class="stage-background">
             <div class="character"></div>
 
-            <div class="modal_block">
-                <div class="message_window_block">
-                    <div class="chat_block"></div>
-                    
-                    <div class="wrapper-input_block">
-                        <div class="default_messages"></div>
-                        <div class="input_block">
-                            <input type="text" placeholder="Напиши Дед инсайду" id="input-message">
-                            <button class="send-message">▶</button>
+            <div class="wrapper-chat-block">
+                <button class="button-back"></button>
+                <div class="message-window-block">
+                    <div class="chat-block"></div>
+
+                    <div class="wrapper-input-block">
+                        
+                        <div class="default-messages"></div>
+
+                        <div class="input-block">
+                            <input type="text" placeholder="Напиши Дед инсайду" class="input-message">
+                            <button class="input-block__send-message">▶</button>
                         </div>
                     </div>
                 </div>
@@ -34,6 +41,8 @@
 
         </div>
     </div>
+
+    <audio id="audio" src="aud/song-dead-inside.mp3" hidden></audio>
 
 
 </body>
