@@ -20,6 +20,24 @@ function showsTheRoom() {
 }
 
 function botSong() {
-
   audio.play();
+  console.log(defoultMessage);
+
+  const stopTheSongBlock = document.createElement('p');
+  stopTheSongBlock.classList.add('text-default-messages');
+  stopTheSongBlock.appendChild(document.createTextNode('stop'));
+
+
+  blockDefaultMessages.prepend(stopTheSongBlock);
+
+  stopTheSongBlock.addEventListener('click', () => {
+    const userReplica = chatBlock.appendChild(document.createElement('div'));
+    userReplica.classList.add('message-user');
+
+    userReplica.textContent = 'stop';
+    audio.pause();
+    stopTheSongBlock.remove();
+  })
+
+  console.log(textDefaultMessage);
 }

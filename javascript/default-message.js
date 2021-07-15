@@ -1,6 +1,5 @@
 const blockDefaultMessages = document.querySelector('.default-messages');
-
-const defoultMessage = ['Привет', 'Как дела?', 'Кто ты?', 'Как стать dead inside?',  'Где ты живешь?', 'Ты веришь в любовь?', 'Покажи комнату',];
+let defoultMessage = ['Привет', 'Как дела?', 'Кто ты?', 'Как стать dead inside?', 'Где ты живешь?', 'Ты веришь в любовь?', 'Покажи комнату',];
 
 
 defoultMessage.forEach((text, i) => {
@@ -16,9 +15,13 @@ defoultMessage.forEach((text, i) => {
 
 const textDefaultMessage = document.querySelectorAll('p');
 textDefaultMessage.forEach(el => {
-
     el.addEventListener('click', () => {
         generateMessage(el.textContent);
-        el.remove();
+
     })
 });
+
+// console.log(defoultMessage);
+console.log(textDefaultMessage);
+
+

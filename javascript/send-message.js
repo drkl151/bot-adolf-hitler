@@ -49,11 +49,9 @@ function generateMessage(userMessage) {
         } else {
             botReplica.textContent = botMessage[Math.floor(Math.random() * botMessage.length)];
         }
-
     } else {
         botReplica.textContent = unknownCommand[Math.floor(Math.random() * unknownCommand.length)];
     }
-
 
     //bot actions (действия бота) [bot-action.js]
     //shows the room (показывает комнату)
@@ -65,6 +63,7 @@ function generateMessage(userMessage) {
 
     //sings a song (поет песню)
     if (lowerCaseMessage.includes('пой')) {
+        // botReplica.textContent = '';
         botSong();
     }
 

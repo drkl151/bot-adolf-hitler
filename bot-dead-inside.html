@@ -11,14 +11,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kurale&display=swap" rel="stylesheet">
-    <script defer src="./javascript/bot-actions.js"></script>
     <script defer src="./javascript/default-message.js"></script>
+    <script defer src="./javascript/bot-actions.js"></script>
     <script defer src="./javascript/bot-commands.js"></script>
     <script defer src="./javascript/send-message.js"></script>
 </head>
 
 <body>
-    <div class="wrapper">
+    <div class="main-wrapper">
+        <div class="modal-window">
+            <div class="information-about"></div>
+        </div>
+        
         <div class="stage-background">
             <div class="character"></div>
 
@@ -28,7 +32,6 @@
                     <div class="chat-block"></div>
 
                     <div class="wrapper-input-block">
-                        
                         <div class="default-messages"></div>
 
                         <div class="input-block">
@@ -38,11 +41,11 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 
-    <audio id="audio" src="aud/song-dead-inside.mp3" hidden></audio>
+    <audio id="audio" src="aud/song-dead-inside.mp3"></audio>
+    <div class="bot-song"></div>
 
 
 </body>
